@@ -1,0 +1,89 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --text-muted: #777777;
+    --primary-color: #000000;
+    --accent-color: #555555;
+    --glass-bg: #ffffff;
+    --glass-border: #e0e0e0;
+    --nav-bg: #ffffff;
+    --card-hover: #fafafa;
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --text-muted: #aaaaaa;
+    --primary-color: #ffffff;
+    --accent-color: #dddddd;
+    --glass-bg: #1a1a1a;
+    --glass-border: #333333;
+    --nav-bg: #1a1a1a;
+    --card-hover: #222222;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .text-color, .text-muted {
+    color: var(--text-color) !important;
+}
+.text-muted { opacity: 0.7; }
+.gradient-text { color: var(--text-color); font-weight: bold; }
+.section-title::after { display: none; }
+.glow { display: none !important; }
+a { text-decoration: none; color: var(--text-color); }
+
+.glass-nav {
+    background: var(--nav-bg) !important;
+    border-bottom: 1px solid var(--glass-border);
+    backdrop-filter: none;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border) !important;
+    box-shadow: none;
+    border-radius: 4px !important;
+    backdrop-filter: none;
+    transition: all 0.2s;
+}
+
+.glass-card:hover {
+    background: var(--card-hover);
+    box-shadow: 0 4px 10px var(--shadow-color);
+}
+
+.btn-primary {
+    background: var(--text-color) !important;
+    color: var(--bg-color) !important;
+    border-radius: 4px !important;
+    border: 1px solid var(--text-color) !important;
+}
+
+.btn-outline-custom {
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    border-radius: 4px !important;
+}
+.icon-box { background: transparent !important; border: 1px solid var(--glass-border) !important; }
+.badge-custom {
+    border: 1px solid var(--text-color) !important;
+    color: var(--text-color) !important;
+    background: transparent !important;
+    border-radius: 4px !important;
+}
+.profile-img-container {
+    background: var(--text-color);
+    border-radius: 4px !important;
+    box-shadow: none;
+    animation: none;
+}
+.profile-placeholder { border-radius: 4px !important; background: var(--bg-color); color: var(--text-color);}
+.theme-btn { border: 1px solid var(--glass-border); background: var(--bg-color); border-radius: 4px !important; color: var(--text-color); }

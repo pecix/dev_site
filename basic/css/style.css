@@ -1,0 +1,270 @@
+/* =========================================
+   VARIABLES & THEMES
+   ========================================= */
+   :root {
+    /* LIGHT THEME (Clean, modern approach) */
+    --bg-color: #f8fafc;
+    --text-color: #0f172a;
+    --text-muted: #64748b;
+    --primary-color: #2563eb;
+    --accent-color: #7c3aed;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 1);
+    --nav-bg: rgba(255, 255, 255, 0.85);
+    --card-hover: rgba(255, 255, 255, 0.95);
+    --shadow-color: rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="dark"] {
+    /* DARK THEME (Cyberpunk/Neon vibe) */
+    --bg-color: #0b0f19;
+    --text-color: #f8f9fa;
+    --text-muted: #94a3b8;
+    --primary-color: #00f2fe;
+    --accent-color: #4facfe;
+    --glass-bg: rgba(30, 41, 59, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --nav-bg: rgba(11, 15, 25, 0.85);
+    --card-hover: rgba(30, 41, 59, 0.9);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+/* =========================================
+   GLOBAL STYLES (Smooth transitions)
+   ========================================= */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    transition: color 0.4s ease;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+    transition: color 0.4s ease;
+}
+
+.text-color {
+    color: var(--text-color) !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+.gradient-text {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    background-size: 200% auto;
+    animation: gradientFlow 4s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 50%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 5px;
+}
+
+.sub-heading {
+    letter-spacing: 3px;
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+
+@media (min-width: 992px) {
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+/* =========================================
+   GLASSMORPHISM
+   ========================================= */
+.glass-nav {
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    transition: all 0.4s ease;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px 0 var(--shadow-color);
+    transition: transform 0.3s ease, background 0.4s ease, box-shadow 0.3s ease, border-color 0.4s ease;
+}
+
+.project-card:hover, .skill-card:hover {
+    transform: translateY(-8px);
+    background: var(--card-hover);
+    box-shadow: 0 20px 40px 0 var(--shadow-color);
+}
+
+/* =========================================
+   COMPONENTS
+   ========================================= */
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    border: none;
+    color: #fff;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    background-size: 200% auto;
+}
+
+.btn-primary:active {
+    transform: scale(0.95);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    opacity: 0.9;
+    color: #fff;
+    background-position: right center;
+}
+
+.btn-outline-custom {
+    color: var(--text-color);
+    border: 2px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+}
+
+.theme-btn {
+    width: 45px;
+    height: 45px;
+    color: var(--text-color);
+    padding: 0;
+    border: 1px solid var(--glass-border);
+}
+
+.theme-btn:hover {
+    color: var(--primary-color);
+    background: var(--card-hover);
+}
+
+.custom-hover-link {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-hover-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+.toggler-custom {
+    color: var(--text-color);
+}
+
+.badge-custom {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--text-color);
+    padding: 0.5em 0.8em;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: all 0.4s ease;
+}
+
+[data-theme="dark"] .badge-custom {
+    background-color: rgba(0, 242, 254, 0.05);
+    border-color: rgba(0, 242, 254, 0.4);
+    color: #bbf7d0; /* A soft bright color */
+}
+
+[data-theme="light"] .badge-custom {
+    color: var(--primary-color);
+    border-color: rgba(37, 99, 235, 0.5);
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* =========================================
+   DECORATIVE ELEMENTS
+   ========================================= */
+.z-1 {
+    position: relative;
+    z-index: 1;
+}
+
+.glow {
+    position: absolute;
+    background: var(--primary-color);
+    filter: blur(120px);
+    border-radius: 50%;
+    opacity: 0.15;
+    z-index: 0;
+    pointer-events: none;
+    transition: background 0.5s ease;
+}
+
+[data-theme="light"] .glow {
+    opacity: 0.1;
+    filter: blur(100px);
+}
+
+.glow-1 { width: 400px; height: 400px; top: -10%; left: -10%; }
+.glow-2 { width: 300px; height: 300px; bottom: 10%; right: -5%; background: var(--accent-color); }
+.glow-centered { width: 500px; height: 500px; top: 30%; left: 50%; transform: translateX(-50%); background: var(--accent-color); opacity: 0.1; }
+
+.profile-img-container {
+    width: 320px;
+    height: 320px;
+    padding: 6px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    box-shadow: 0 20px 40px var(--shadow-color);
+    animation: floating 6s ease-in-out infinite;
+}
+
+.profile-placeholder {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}

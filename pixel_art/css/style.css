@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --bg-color: #5c94fc; 
+    --text-color: #ffffff;
+    --text-muted: #efefef;
+    --primary-color: #e52521; 
+    --accent-color: #fbd000; 
+    --glass-bg: #8b4513;
+    --glass-border: #000000;
+    --nav-bg: #000000; 
+    --card-hover: #b05e20;
+}
+
+[data-theme="light"] {
+    --bg-color: #c0c0c0; 
+    --text-color: #000000;
+    --text-muted: #555555;
+    --glass-bg: #ffffff;
+    --glass-border: #000000;
+    --nav-bg: #c0c0c0;
+    --card-hover: #eeeeee;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, .text-color { color: var(--text-color) !important; font-size: 14px; text-transform: uppercase; }
+.hero-title { font-size: 20px; line-height: 1.5; }
+.text-muted { color: var(--text-muted) !important; font-size: 9px; }
+.gradient-text { background: none; -webkit-text-fill-color: var(--accent-color); }
+.glow { display: none !important; }
+.section-title::after { display: none; }
+a { text-decoration: none; color: var(--accent-color); }
+
+.glass-nav {
+    background: var(--nav-bg) !important;
+    border-bottom: 4px solid var(--glass-border);
+    backdrop-filter: none;
+}
+
+* { border-radius: 0 !important; }
+
+.glass-card, .profile-img-container {
+    background: var(--glass-bg);
+    border: 4px solid var(--glass-border) !important;
+    box-shadow: 4px 4px 0px rgba(0,0,0,1) !important;
+    backdrop-filter: none;
+    transition: none;
+    color: var(--text-color) !important;
+}
+
+.glass-card:hover { background: var(--card-hover); }
+
+.btn-primary, .btn-outline-custom, .theme-btn {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+    border: 4px solid #000 !important;
+    box-shadow: 4px 4px 0px #000;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+}
+.btn-outline-custom { background: var(--accent-color) !important; color: #000 !important; border: 4px solid #000 !important;}
+
+.btn-primary:active, .btn-outline-custom:active, .theme-btn:active {
+    box-shadow: 0px 0px 0px #000;
+    transform: translate(4px, 4px);
+}
+
+.badge-custom {
+    border: 2px solid var(--glass-border) !important;
+    color: var(--glass-border) !important;
+    background: transparent !important;
+    font-size: 8px;
+    padding: 4px;
+}
+.icon-box { background: var(--glass-bg) !important; border: 2px solid var(--glass-border) !important; }
+.profile-placeholder { background: transparent !important; color: var(--text-color) !important; }

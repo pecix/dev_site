@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #fdfbf7;
+    --text-color: #2b2b2b;
+    --text-muted: #5a5a5a;
+    --primary-color: #2b2b2b;
+    --accent-color: #3d3d3d;
+    --glass-bg: #ffffff;
+    --glass-border: #2b2b2b;
+    --nav-bg: #fdfbf7;
+    --card-hover: #f9f9f9;
+}
+
+[data-theme="dark"] {
+    --bg-color: #2b2b2b;
+    --text-color: #fdfbf7;
+    --text-muted: #dcdcdc;
+    --primary-color: #fdfbf7;
+    --glass-border: #fdfbf7;
+    --glass-bg: #333333;
+    --nav-bg: #2b2b2b;
+    --card-hover: #3d3d3d;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(var(--text-muted) 1px, transparent 0);
+    background-size: 40px 40px;
+    color: var(--text-color);
+    font-family: 'Caveat', cursive, sans-serif;
+    font-size: 1.2rem;
+}
+
+h1, h2, h3, h4, .text-color { color: var(--text-color) !important; font-weight: bold; }
+.text-muted { color: var(--text-muted) !important; font-family: serif; font-style: italic; font-size: 1rem; }
+.gradient-text { background: none; -webkit-text-fill-color: var(--text-color); text-decoration: underline wavy var(--text-color); }
+.glow { display: none !important; }
+.section-title::after { display: none; }
+a { text-decoration: none; color: var(--text-color); }
+
+.glass-nav {
+    background: var(--nav-bg) !important;
+    border-bottom: 2px solid var(--glass-border);
+    backdrop-filter: none;
+}
+
+.glass-card, .profile-img-container {
+    background: var(--glass-bg);
+    border: 2px solid var(--glass-border) !important;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+    box-shadow: 4px 4px 0 var(--text-muted) !important;
+    backdrop-filter: none;
+    transition: transform 0.2s;
+}
+
+.glass-card:nth-child(even) { transform: rotate(1deg); }
+.glass-card:nth-child(odd) { transform: rotate(-1deg); }
+.glass-card:hover { background: var(--card-hover); transform: rotate(0deg) scale(1.05); }
+
+.btn-primary, .btn-outline-custom, .theme-btn {
+    background: transparent !important;
+    color: var(--text-color) !important;
+    border: 2px solid var(--text-color) !important;
+    border-radius: 15px 225px 15px 255px/255px 15px 225px 15px !important;
+    font-weight: bold;
+}
+.btn-primary:hover, .btn-outline-custom:hover { background: var(--text-color) !important; color: var(--bg-color) !important; }
+
+.badge-custom {
+    border: 1px solid var(--text-color) !important;
+    color: var(--text-color) !important;
+    background: transparent !important;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
+}
+.icon-box { background: transparent !important; border: 2px solid var(--glass-border) !important; border-radius: 50% 40% 50% 40% / 40% 50% 40% 50% !important; }
+.profile-placeholder { background: transparent !important; color: var(--text-color); }

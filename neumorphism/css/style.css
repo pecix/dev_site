@@ -1,0 +1,75 @@
+:root {
+    --bg-color: #e0e5ec;
+    --text-color: #4a5568;
+    --text-muted: #718096;
+    --primary-color: #3182ce;
+    --accent-color: #3182ce;
+    --glass-bg: #e0e5ec;
+    --glass-border: transparent;
+    --nav-bg: #e0e5ec;
+    --card-hover: #e0e5ec;
+    --neu-shadow-1: 9px 9px 16px rgba(163,177,198,0.6);
+    --neu-shadow-2: -9px -9px 16px rgba(255,255,255, 0.5);
+    --neu-inset-1: inset 6px 6px 10px 0 rgba(163,177,198, 0.7);
+    --neu-inset-2: inset -6px -6px 10px 0 rgba(255,255,255, 0.8);
+}
+[data-theme="dark"] {
+    --bg-color: #2d3748;
+    --text-color: #e2e8f0;
+    --text-muted: #a0aec0;
+    --glass-bg: #2d3748;
+    --nav-bg: #2d3748;
+    --card-hover: #2d3748;
+    --neu-shadow-1: 9px 9px 16px rgba(0,0,0,0.3);
+    --neu-shadow-2: -9px -9px 16px rgba(255,255,255,0.05);
+    --neu-inset-1: inset 6px 6px 10px 0 rgba(0,0,0,0.3);
+    --neu-inset-2: inset -6px -6px 10px 0 rgba(255,255,255,0.05);
+}
+
+body { background-color: var(--bg-color); color: var(--text-color); transition: all 0.3s; font-family: 'Inter', sans-serif; }
+h1, h2, h3, h4, h5, h6, .text-color { color: var(--text-color) !important; }
+.text-muted { color: var(--text-muted) !important; }
+.gradient-text { background: none; -webkit-text-fill-color: var(--primary-color); font-weight: bold; }
+.glow { display: none !important; }
+.section-title::after { display: none; }
+a { text-decoration: none; color: var(--primary-color); }
+
+.glass-nav {
+    background: var(--nav-bg) !important;
+    box-shadow: var(--neu-shadow-1), var(--neu-shadow-2);
+    border: none;
+    backdrop-filter: none;
+}
+
+.glass-card, .profile-img-container {
+    background: var(--glass-bg);
+    border: none !important;
+    box-shadow: var(--neu-shadow-1), var(--neu-shadow-2) !important;
+    border-radius: 20px !important;
+    backdrop-filter: none;
+    animation: none !important;
+    color: var(--text-color) !important;
+}
+
+.glass-card:hover {
+    box-shadow: var(--neu-inset-1), var(--neu-inset-2) !important;
+}
+
+.btn-primary, .btn-outline-custom, .theme-btn {
+    background: var(--glass-bg) !important;
+    color: var(--primary-color) !important;
+    border: none !important;
+    box-shadow: var(--neu-shadow-1), var(--neu-shadow-2);
+    border-radius: 50px !important;
+}
+.btn-primary:hover, .btn-outline-custom:hover {
+    box-shadow: var(--neu-inset-1), var(--neu-inset-2);
+}
+.badge-custom {
+    border: none !important;
+    color: var(--text-color) !important;
+    background: var(--glass-bg) !important;
+    box-shadow: var(--neu-inset-1), var(--neu-inset-2);
+}
+.profile-placeholder { background: transparent !important; color: var(--primary-color) !important; }
+.icon-box { background: transparent !important; border:none!important; box-shadow: var(--neu-inset-1), var(--neu-inset-2); }

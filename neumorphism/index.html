@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artur Petrusiewicz - Fullstack Developer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg glass-nav fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="#"><span class="gradient-text">AP.</span> Developer</a>
+            <button class="navbar-toggler border-0 shadow-none toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-1"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link fw-semibold text-color" href="#hero">Start</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-color" href="#about">O Mnie</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-color" href="#skills">Umiejętności</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold text-color" href="#projects">Projekty</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <button id="theme-toggle" class="btn glass-card rounded-circle d-flex align-items-center justify-content-center theme-btn">
+                            <i id="theme-icon" class="bi bi-moon-stars-fill fs-5"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center min-vh-100 position-relative pb-5 overflow-hidden">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        
+        <div class="container text-center text-lg-start z-1 relative mt-5 pt-5 pt-lg-0">
+            <div class="row align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-7 mt-5 mt-lg-0">
+                    <h2 class="sub-heading text-uppercase tracking-wider mb-2">Cześć, jestem</h2>
+                    <h1 class="hero-title fw-bold mb-3">Artur <br/><span class="gradient-text">Petrusiewicz</span></h1>
+                    <h3 class="h4 mb-4 fw-light text-muted">Fullstack Developer (Java & Angular)</h3>
+                    <p class="lead mb-5 pe-lg-5 lh-base text-muted">
+                        Doświadczony programista specjalizujący się w projektowaniu i tworzeniu zaawansowanych systemów biznesowych (Enterprise). Od architektury bazy danych, poprzez solidny backend w <strong>Java & Spring</strong>, aż po interaktywny i dynamiczny interfejs w nowoczesnym <strong>Angularze</strong>.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start flex-wrap">
+                        <a href="#projects" class="btn btn-primary px-5 py-3 rounded-pill fw-bold shadow-lg">Moje Projekty</a>
+                        <a href="#contact" class="btn btn-outline-custom px-5 py-3 rounded-pill fw-bold">Skontaktuj się</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center mb-5 mb-lg-0">
+                    <div class="profile-img-container mx-auto position-relative">
+                        <div class="profile-placeholder d-flex align-items-center justify-content-center rounded-circle w-100 h-100 fs-1 fw-bold">
+                            AP
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 position-relative">
+        <div class="container py-5 z-1 relative">
+            <h2 class="text-center fw-bold mb-5 section-title">O Mnie</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-md-5 rounded-4 text-center">
+                        <i class="bi bi-person-badge fs-1 gradient-text mb-3 d-inline-block"></i>
+                        <p class="fs-5 lh-lg text-muted m-0">
+                            Jestem pasjonatem technologii z doświadczeniem w tworzeniu kompleksowych aplikacji webowych. 
+                            Skupiam się na dostarczaniu oprogramowania najwyższej jakości: dobrze zoptymalizowanego, skalowalnego i niezawodnego. 
+                            Pracowałem przy dużych systemach dla różnych branż (HR, księgowość, medycyna), 
+                            co dało mi bardzo dobre zrozumienie cyklu wytwarzania oprogramowania od analizy po wdrożenie na produkcję. 
+                            Stawiam na czysty kod i najnowsze standardy branżowe. Wierzę, że optymalny backend z intuicyjnym, responsywnym
+                            frontendem to podstawa sukcesu produktu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 position-relative">
+        <div class="glow glow-centered"></div>
+        <div class="container py-5 z-1 relative">
+            <h2 class="text-center fw-bold mb-5 section-title">Stack Technologiczny</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-4 text-center">
+                <div class="col">
+                    <div class="glass-card skill-card p-4 rounded-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-cup-hot-fill fs-1 mb-3 gradient-text"></i>
+                        <h5 class="fw-bold m-0">Java</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="glass-card skill-card p-4 rounded-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-gear-wide-connected fs-1 mb-3 gradient-text"></i>
+                        <h5 class="fw-bold m-0">Spring</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="glass-card skill-card p-4 rounded-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-shield-shaded fs-1 mb-3 gradient-text"></i>
+                        <h5 class="fw-bold m-0">Angular</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="glass-card skill-card p-4 rounded-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-filetype-js fs-1 mb-3 gradient-text"></i>
+                        <h5 class="fw-bold m-0">JavaScript</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="glass-card skill-card p-4 rounded-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-window-sidebar fs-1 mb-3 gradient-text"></i>
+                        <h5 class="fw-bold m-0">HTML & CSS</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="glass-card skill-card p-4 rounded-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-database-fill fs-1 mb-3 gradient-text"></i>
+                        <h5 class="fw-bold m-0">SQL</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="glass-card skill-card p-4 rounded-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-box-seam fs-1 mb-3 gradient-text"></i>
+                        <h5 class="fw-bold m-0">Docker</h5>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="glass-card skill-card p-4 rounded-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-git fs-1 mb-3 gradient-text"></i>
+                        <h5 class="fw-bold m-0">Git</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 position-relative">
+         <div class="glow glow-1"></div>
+        <div class="container py-5 z-1 relative">
+            <h2 class="text-center fw-bold mb-5 section-title">Realizacje & Projekty</h2>
+            <div class="row g-4">
+                
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="card glass-card project-card border-0 rounded-4 w-100">
+                        <div class="card-body p-4 p-xl-5 d-flex flex-column">
+                            <div class="mb-4 d-flex justify-content-between align-items-start">
+                                <div class="icon-box rounded-circle d-flex align-items-center justify-content-center glass-card border-0" style="width:50px; height:50px;">
+                                    <i class="bi bi-people-fill fs-4 gradient-text"></i>
+                                </div>
+                                <a href="#" target="_blank" class="text-color opacity-75 custom-hover-link"><i class="bi bi-github fs-4"></i></a>
+                            </div>
+                            <h4 class="card-title fw-bold mb-3">System Kadrowy</h4>
+                            <p class="card-text text-muted flex-grow-1">
+                                Kompleksowy system typu HR do zarządzania pracownikami. Obsługuje m.in. ewidencję czasu pracy, urlopy, historię zatrudnienia i generowanie skomplikowanych raportów.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mt-4">
+                                <span class="badge badge-custom">Java</span>
+                                <span class="badge badge-custom">Spring</span>
+                                <span class="badge badge-custom">Angular</span>
+                                <span class="badge badge-custom">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="card glass-card project-card border-0 rounded-4 w-100">
+                        <div class="card-body p-4 p-xl-5 d-flex flex-column">
+                            <div class="mb-4 d-flex justify-content-between align-items-start">
+                                <div class="icon-box rounded-circle d-flex align-items-center justify-content-center glass-card border-0" style="width:50px; height:50px;">
+                                    <i class="bi bi-graph-up-arrow fs-4 gradient-text"></i>
+                                </div>
+                                <a href="#" target="_blank" class="text-color opacity-75 custom-hover-link"><i class="bi bi-github fs-4"></i></a>
+                            </div>
+                            <h4 class="card-title fw-bold mb-3">System Finansowo-Księgowy</h4>
+                            <p class="card-text text-muted flex-grow-1">
+                                Platforma do prowadzenia księgowości i rozliczeń finansowych. Usprawnia obieg dokumentów i minimalizuje ręczne wprowadzanie danych poprzez zaawansowane skrypty księgujące.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mt-4">
+                                <span class="badge badge-custom">Java</span>
+                                <span class="badge badge-custom">Spring</span>
+                                <span class="badge badge-custom">Angular</span>
+                                <span class="badge badge-custom">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                    <div class="card glass-card project-card border-0 rounded-4 w-100">
+                        <div class="card-body p-4 p-xl-5 d-flex flex-column">
+                            <div class="mb-4 d-flex justify-content-between align-items-start">
+                                <div class="icon-box rounded-circle d-flex align-items-center justify-content-center glass-card border-0" style="width:50px; height:50px;">
+                                    <i class="bi bi-capsule fs-4 gradient-text"></i>
+                                </div>
+                                <a href="#" target="_blank" class="text-color opacity-75 custom-hover-link"><i class="bi bi-github fs-4"></i></a>
+                            </div>
+                            <h4 class="card-title fw-bold mb-3">System Apteczny</h4>
+                            <p class="card-text text-muted flex-grow-1">
+                                Oprogramowanie dedykowane dla punktów farmaceutycznych. Obejmuje obsługę magazynu leków, zautomatyzowane zamawianie asortymentu hurtowego.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mt-4">
+                                <span class="badge badge-custom">Java</span>
+                                <span class="badge badge-custom">Spring</span>
+                                <span class="badge badge-custom">Angular</span>
+                                <span class="badge badge-custom">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer id="contact" class="py-5 mt-5">
+        <div class="container text-center z-1 relative">
+            <h3 class="fw-bold mb-4 gradient-text">Zostańmy w kontakcie!</h3>
+            <p class="text-muted mb-4 mx-auto" style="max-width: 500px;">
+                Ciągle szukam nowych wyzwań i ciekawych projektów. Masz pytania lub chcesz nawiązać współpracę?
+            </p>
+            <div class="d-flex justify-content-center gap-3 mb-5">
+                <a href="#" target="_blank" class="btn btn-icon-lg glass-card rounded-circle d-flex align-items-center justify-content-center text-color custom-hover-link" style="width: 60px; height: 60px;">
+                    <i class="bi bi-github fs-3"></i>
+                </a>
+                <a href="#" target="_blank" class="btn btn-icon-lg glass-card rounded-circle d-flex align-items-center justify-content-center text-color custom-hover-link" style="width: 60px; height: 60px;">
+                    <i class="bi bi-linkedin fs-3"></i>
+                </a>
+                <a href="#" class="btn btn-icon-lg glass-card rounded-circle d-flex align-items-center justify-content-center text-color custom-hover-link" style="width: 60px; height: 60px;">
+                    <i class="bi bi-envelope-fill fs-3"></i>
+                </a>
+            </div>
+            <p class="text-muted small m-0">&copy; 2026 Artur Petrusiewicz. Portfolio Fullstack Developer.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
